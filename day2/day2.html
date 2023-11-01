@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+    <style>
+        button{
+            display: block;
+            font-size: 22px;
+            margin-block: 0.5em;
+        }
+
+        input{
+            padding: 0.5em;
+            width: 100%;
+            margin-block: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day 2 - JS</h1>
+    <button ondblclick="registerFunction()">Double Click</button>
+    <button onclick="registerFunction()">On Click</button>
+    <button onmouseenter="registerFunction()">On mouse Enter</button>
+    <button onmouseleave="registerFunction()">On mouse leave</button>
+
+    <input type="text" oninput="registerFunction()" onblur="registerFunction()">
+    <button>Test</button>
+
+    <div>
+        <h2>Function with Parameter</h2>
+        <p>Click on sum to print sum of <strong>3</strong> and <strong>4</strong></p>
+        <button onclick="sum(3,4)">Sum</button>
+    </div>
+    <div>
+        <h2>Function with Parameter</h2>
+        <p>Click on product to print product of <strong>3</strong> and <strong>4</strong></p>
+        <button onclick="product(3,4)">Product</button>
+    </div>
+    <div>
+        <h2>Square</h2>
+        <button onclick="square(3)">Square</button>
+    </div>
+    <script src="day2.js"></script>
+</body>
+</html>
