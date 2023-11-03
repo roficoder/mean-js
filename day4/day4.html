@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4</title>
+</head>
+<body>
+    <h1>Day 4 - JS</h1>
+
+    <p id="para">Lorem ipsum</p>
+    <button id="clickBtn" onclick="changePara(1)">Hamid</button>
+    <button id="clickBtn" onclick="changePara(2)">Zarrar</button>
+    <button id="clickBtn" onclick="changePara(3)">Aleezy</button>
+
+    <script>
+
+        let clickBtn = document.getElementById('clickBtn');
+        let para = document.getElementById('para');
+
+        console.log(clickBtn, para);
+
+        function changePara(id){
+            para.innerText = "Falala"
+
+            if(id == 1){
+                console.log("Hamid Sahb");
+                para.innerText = "Hamid Sahb"
+            }else if(id == 2){
+                console.log("Zarar");
+                para.innerText = "Zarrar"
+            }else if(id == 3){
+                console.log("Aleezay");
+                para.innerText = "Aleezay"
+
+            }
+            console.log(id);
+            // if()
+        }
+    </script>
+    <script src="day4.js"></script>
+</body>
+</html>
