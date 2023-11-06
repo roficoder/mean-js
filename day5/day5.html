@@ -75,10 +75,7 @@
 
         // tableRows[0].innerHTML = "<td>Some name</td><td>Age</td>
         // <td>City</td>"
-        tableRows[0].innerHTML = `
-        <td>${boolean[0].name}</td>
-        <td>${boolean[0].age}</td>
-        <td>${boolean[0].city}</td>`
+        tableRows[0].innerHTML = "<td>" + boolean[0].name +"</td>" + "<td>" + boolean[0].age +"</td>" + "<td>" + boolean[0].city +"</td>"
         tableRows[1].innerHTML = `
         <td>${boolean[1].name}</td>
         <td>${boolean[1].age}</td>
@@ -90,7 +87,10 @@
 
     
 
-            
+        let string = "Raouf";
+        
+        console.log(string + " is a student");
+        console.log(`${string} is a student`);
 
 
     </script>
