@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        /* border: thin solid black; */
+        border-collapse: collapse;
+    }
+
+    th,td{
+        padding: 1em;
+        border: thin solid black;
+    }
+</style>
+<body>
+    <h1>Day 5 - JS</h1>
+
+    <table >
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </thead>
+        <tbody id="tablebody">
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>City</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>City</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>City</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+
+
+    <script>
+
+        let boolean = [
+            {
+                name: "Raouf",
+                age: 21,
+                city: 'RYK'
+            },
+            {
+                name: "John",
+                age: 42,
+                city: "New York"
+            },
+            {
+                name: "John",
+                age: 42,
+                city: "New York"
+            }
+        ];
+
+        let table = document.getElementById('tablebody')
+
+        let tableRows = table.getElementsByTagName('tr')
+
+        console.log(tableRows);
+
+        // tableRows[0].innerHTML = "<td>Some name</td><td>Age</td>
+        // <td>City</td>"
+        tableRows[0].innerHTML = `
+        <td>${boolean[0].name}</td>
+        <td>${boolean[0].age}</td>
+        <td>${boolean[0].city}</td>`
+        tableRows[1].innerHTML = `
+        <td>${boolean[1].name}</td>
+        <td>${boolean[1].age}</td>
+        <td>${boolean[1].city}</td>`
+        tableRows[2].innerHTML = `
+        <td>${boolean[2].name}</td>
+        <td>${boolean[2].age}</td>
+        <td>${boolean[2].city}</td>`
+
+    
+
+            
+
+
+    </script>
+</body>
+</html>
