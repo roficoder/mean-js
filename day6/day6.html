@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 - JS</title>
+</head>
+
+<body>
+    <h1>Day 6 - JS</h1>
+
+    <h1>Array</h1>
+
+    <!-- <button onclick="numChanger('even')">Even</button>
+    <button onclick="numChanger('odd')">Odd</button>
+
+    <ul id="myUl">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> -->
+
+    <!-- <button onclick="printCarProperties(1)">Car1</button>
+    <button onclick="printCarProperties(2)">Car2</button>
+    <button onclick="printCarProperties(3)">Car3</button> -->
+
+
+    <!-- 2nd Assignment -->
+    <!-- <button onclick="printCarProperties(0)">Car1</button>
+    <button onclick="printCarProperties(1)">Car2</button>
+    <button onclick="printCarProperties(2)">Car3</button>
+    <button onclick="printCarProperties(3)">Car3</button>
+    <button onclick="printCarProperties(4)">Car3</button>
+    <button onclick="printCarProperties(5)">Car3</button> -->
+
+    <!-- 3rd Assignment -->
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Institute</th>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        let tbody = document.getElementById('tbody')
+
+        let arr = [
+            {
+                name: 'Test',
+                age: 21,
+                city: 'London',
+                institute: 'dev'
+            },
+            {
+                name: 'Test 2',
+                age: 21,
+                city: 'London',
+                institute: 'dev'
+            },
+            {
+                name: 'Test 3',
+                age: 21,
+                city: 'London',
+                institute: 'dev'
+            },
+        ]
+
+        renderData()
+
+        function renderData(){
+            tbody.innerHTML = `
+            <tr>
+                <td>${arr[0].name}</td>
+                <td>${arr[0].age}</td>
+                <td>${arr[0].city}</td>
+                <td>${arr[0].institute}</td>
+            </tr>
+            <tr>
+                <td>${arr[1].name}</td>
+                <td>${arr[1].age}</td>
+                <td>${arr[1].city}</td>
+                <td>${arr[1].institute}</td>
+            </tr>
+            <tr>
+                <td>${arr[2].name}</td>
+                <td>${arr[2].age}</td>
+                <td>${arr[2].city}</td>
+                <td>${arr[2].institute}</td>
+            </tr>
+            `
+        }
+
+        // let cars = [
+        //     {
+        //         carName: 'car1',
+        //         color: 'red',
+        //         price: 250000,
+        //         maker: "Toyota"
+        //     },
+        //     {
+        //         carName: 'car2',
+        //         color: 'blue',
+        //         price: 45615,
+        //         maker: "Toyota"
+        //     },
+        //     {
+        //         carName: 'car3',
+        //         color: 'red',
+        //         price: 464867,
+        //         maker: "Toyota"
+        //     },
+        //     {
+        //         carName: 'car3',
+        //         color: 'red',
+        //         price: 464867,
+        //         maker: "Toyota"
+        //     },
+        //     {
+        //         carName: 'car3',
+        //         color: 'red',
+        //         price: 464867,
+        //         maker: "Toyota"
+        //     },
+        //     {
+        //         carName: 'car3',
+        //         color: 'red',
+        //         price: 464867,
+        //         maker: "Toyota"
+        //     },
+        //     {
+        //         carName: 'car3',
+        //         color: 'red',
+        //         price: 464867,
+        //         maker: "Toyota"
+        //     },
+        // ]
+
+        function printCarProperties(anyCar) {
+            // if (anyCar == 1) {
+            //     console.log(`You selected ${cars[0].carName}. The maker of this car is ${cars[0].maker}, price of this car is ${cars[0].price}, and color of this car is ${cars[0].color}`);
+            // } else if (anyCar == 2) {
+            //     console.log(`You selected ${cars[1].carName}. The maker of this car is ${cars[1].maker}, price of this car is ${cars[1].price}, and color of this car is ${cars[1].color}`);
+            // } else if (anyCar == 3) {
+            //     console.log(`You selected ${cars[2].carName}. The maker of this car is ${cars[2].maker}, price of this car is ${cars[2].price}, and color of this car is ${cars[2].color}`);
+            // }
+
+            // console.log(anyCar);
+            // console.log(cars);
+            // console.log(`You selected ${cars[anyCar].carName}. The maker of this car is ${cars[anyCar].maker}, price of this car is ${cars[anyCar].price}, and color of this car is ${cars[anyCar].color}`);
+
+        }
+
+
+
+        // let evenArr = [2, 4, 6, 8, 10]
+        // let oddArr = [1, 3, 5, 7, 9]
+
+        // let myUl = document.getElementById('myUl')
+
+        // let lis = myUl.getElementsByTagName('li')
+
+        // function numChanger(hamzasultan) {
+        //     if (hamzasultan == 'even') {
+        //         lis[0].innerHTML = evenArr[0]
+        //         lis[1].innerHTML = evenArr[1]
+        //         lis[2].innerHTML = evenArr[2]
+        //         lis[3].innerHTML = evenArr[3]
+        //         lis[4].innerHTML = evenArr[4]
+        //     } else if (hamzasultan == 'odd') {
+        //         lis[0].innerHTML = oddArr[0]
+        //         lis[1].innerHTML = oddArr[1]
+        //         lis[2].innerHTML = oddArr[2]
+        //         lis[3].innerHTML = oddArr[3]
+        //         lis[4].innerHTML = oddArr[4]
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
