@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7 - JS</title>
+</head>
+<style>
+    button {
+        /* background-color: orange; */
+    }
+
+    .card {
+        padding: 1em;
+        border-radius: 10px;
+        border: thin solid grey;
+        background-color: rgba(128, 128, 128, 0.11);
+        margin-top: 1em;
+    }
+
+    #card2 {
+        width: 300px;
+        transition: all 0.5s;
+    }
+</style>
+
+<body>
+    <h1>Day 7 - JS</h1>
+
+    <!-- <button onclick="changeStyle(0)">Style 1</button>
+    <button onclick="changeStyle(1)">Style 2</button> -->
+
+    <!-- <button onclick="showHide('show')">Show</button>
+    <button onclick="showHide('hide')">Hide</button> -->
+
+    <!-- <button id="widthBtn">Increase Width</button>
+
+    <div class="card" id="card">
+        <h2>Card</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, repellat.</p>
+    </div>
+
+    <div class="card" id="card2">
+        <h2>Card 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, repellat.</p>
+    </div> -->
+
+
+    <button id="printDataBtn">Print data in table</button>
+
+    <button id="printObjectBtn">Print Object Data</button>
+
+    <ul id="myUl"></ul>
+
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <script>
+
+
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        let arrObj = [
+            {
+                name: 'Raouf',
+                age: 21,
+                grade: 'BSCS'
+            },
+            {
+                name: 'Ammar',
+                age: 21,
+                grade: 'BSCS'
+            },
+            {
+                name: 'Sam',
+                age: 21,
+                grade: 'BSCS'
+            }
+        ]
+
+        let printDataBtn = document.getElementById('printDataBtn');
+        let printObjectBtn = document.getElementById('printObjectBtn');
+
+        printDataBtn.addEventListener('click', function () {
+
+            let str = '';
+
+            arr.forEach(function (item) {
+                console.log(item);
+
+                str = str + `<li>${item}</li>`
+            })
+
+            console.log(str);
+
+            document.getElementById('myUl').innerHTML = str
+        })
+
+        printObjectBtn.addEventListener('click', printObject)
+
+        function printObject() {
+            let str = '';
+            arrObj.forEach(function (obj) {
+                // console.log(obj);
+                str = str + `
+                <tr>
+                    <td>${obj.name}</td>
+                    <td>${obj.age}</td>
+                    <td>${obj.grade}</td>
+                </tr>
+                `
+            })
+
+            console.log(str);
+
+            document.getElementById('tbody').innerHTML = str
+        }
+
+
+
+
+
+        // let btns = document.getElementsByTagName('button');
+
+        // let card = document.getElementById('card')
+        // let card2 = document.getElementById('card2')
+
+        // let widthBtn = document.getElementById('widthBtn')
+
+        // widthBtn.addEventListener('mouseover', increaseWidth)
+
+        // function increaseWidth(){
+        //     card2.style.width = '600px'
+        // }
+
+
+
+
+        // function showHide(action){
+        //     if(action == 'show'){
+        //         card.style.display = 'block'
+        //         card2.style.display = 'none'
+        //     }else {
+        //         card.style.display = 'none'
+        //         card2.style.display = 'block'
+        //     }
+        // }
+
+        // function changeStyle(index){
+        //     if(index == 0){
+        //         btns[0].style.fontSize = "30px"
+        //         btns[0].style.color = "orange"
+        //     }else if(index == 1){
+        //         btns[1].style.fontSize = "30px"
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
