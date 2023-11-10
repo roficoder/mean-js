@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 - JS</title>
+</head>
+
+<body>
+    <h1>Day 8 - JS</h1>
+
+    <p id="para">Test</p>
+
+    <input type="number" id="input">
+    <button id="btn">Start</button>
+
+    <!-- <h1>Loops</h1>
+    <h2>for loops</h2>
+    <h2>while loop</h2>
+    <h2>do while loop</h2> -->
+
+    <script>
+
+        const btn = document.getElementById('btn')
+        const input = document.getElementById('input')
+
+        btn.addEventListener('click',function(){
+            console.log(input.value);
+
+            // Loop
+            for(let i=0; i<input.value; i++){
+                console.log(i);
+            }
+        })
+
+
+        // function greet(){
+        //     console.log("Greet");
+        // }
+
+        // for(let i = 0; i < 5;){
+        //     console.log(i);
+        //     i = i + 2;
+        // }
+
+            
+        for(let mukkaram = 0; mukkaram < 5; mukkaram++){
+
+            console.log(mukkaram);
+
+        }
+
+        const para = document.getElementById('para')
+
+        console.log(para);
+
+        let num = 0;
+
+        // console.log(num);
+
+
+        num = 2
+
+        // console.log(num);
+
+        // para = document.getElementById('para');
+
+
+
+
+        let greet = function () {
+            // console.log("Greet");
+
+            // console.log(num2);
+            console.log(variable);
+
+            console.log(num);
+            let num2 = 4;
+            console.log(num2);
+
+            num2 = 5
+            console.log(num2);
+
+            if (true) {
+                let name1 = "Raouf";
+                console.log(name1);
+
+                if (true) {
+                    console.log(name1);
+                    let name2 = "Raouf 2"
+                    console.log(name2);
+                }
+
+                // console.log(name2);
+            }
+
+            // console.log(name1);
+
+            var variable = 4;
+            console.log(variable);
+        }
+
+
+
+        // console.log(num2);
+
+        let greet2 = () => {
+            // console.log("Greet 2");
+        }
+
+        // greet()
+        // greet2()
+
+        let arr = [1, 3, 4]
+
+        // arr.forEach(function(item){
+        //     console.log(item);
+
+        // })
+
+        // arr.forEach((item)=>{
+        //     console.log(item);
+        // })
+
+        function add(a, b) {
+            console.log(a + b);
+
+            if (dfa) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+        // let str = 'asdjlfh,asdkf,asdkfg,aksgdf'
+        // sdjh
+        // asdjkf
+        // asdfh
+
+        // function returnArr(str){
+        //     return str.split(',');
+        // }
+
+        // let strArr = returnArr(str)
+
+
+        // let strArr2 = returnArr('asdfkhaskdf,asfasgf,asdfuasdf')
+
+        // let add2 = (a,b)=> a + b;
+
+        // console.log(add(1,2));
+        // console.log(add2(1,2));
+
+        // let func = ()=>{
+
+        // }
+    </script>
+</body>
+
+</html>
