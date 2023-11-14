@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day - 10</title>
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <li>Test 2</li>
+
+    <textarea id="task"></textarea>
+    <button type="button" onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <div class="div"></div>
+
+
+    <script>
+        // Short-Hand Version👇👇👇👇
+
+
+
+        // Save task list to localStorage
+        function saveTaskList() {
+            localStorage.setItem("taskList", document.querySelector("#taskList").innerHTML);
+            localStorage.setItem("textareaInput", document.querySelector("#task").value);
+        }
+
+        // Load and display task list from localStorage
+        function loadAndDisplayTaskList() {
+            // I've used the || '' to provide an empty string as a default if localStorage.getItem("taskList") is null or undefined.
+            document.querySelector("#taskList").innerHTML = localStorage.getItem("taskList") || '';
+        }
+        // Load and display textarea input from localStorage
+        function loadTextareaInput() {
+            document.querySelector("#task").value = localStorage.getItem("textareaInput") || '';
+        }
+
+
+
+        // Add a new task to the list and save it
+        function addTask() {
+            const taskText = document.querySelector("#task").value;
+
+
+            const newTask = document.createElement("li");
+            // li is created
+            // <li></li>
+
+
+            newTask.innerText = taskText;
+            // <li>Text</li>
+
+            const ul = document.getElementById('taskList');         
+            ul.appendChild(newTask)
+
+
+
+            // document.querySelector("#taskList").appendChild(newTask);
+
+
+            // saveTaskList();
+        }
+
+
+
+
+        // Load and display the task list and textarea input when the page loads
+        loadTextareaInput();
+        loadAndDisplayTaskList();
+    </script>
+</body>
+
+</html>
