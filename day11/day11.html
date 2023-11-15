@@ -6,56 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 11</title>
 </head>
+<style>
+    ul li {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .time{
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    background: #ae9f84;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 50px;
+    color: white;
+    box-shadow: 0 0 27px #00000082
+    }
+</style>
 
 <body>
     <h1>Day - 11 JS</h1>
     <h2>Local Storage</h2>
 
-    <h3></h3>
+    <h1 class="time" style="text-align: center;"></h1>
+
+    <ul id="ul">
+        <!-- <li></li> -->
+    </ul>
 
     <script>
-        const name = "Raouf";
+        // DATES
 
-        let car = {
-            name: "Toyota",
-            model: 2022,
-            price: "245k"
+
+
+        function timer() {
+
         }
+
+        
+        setInterval(timer, 1000);
+        
+        timer()
+
+
+
+        // it takes in milliseconds
+
+        // console.log(date);
+
+        // const todayDay = date.getDay()
+        // const todayDate = date.getDate()
+        // const todayMonth = date.getMonth()
+
+        // const time = document.querySelector('.time');
+        // const ul = document.getElementById('ul');
+
+
+
+
+        // ul.innerHTML = `<li>${todayDay}</li>`
+        // ul.innerHTML = `<li>Date -- ${todayDate}</li>`
+        // ul.innerHTML = `<li>Month -- ${todayMonth}</li>`
+
+        // console.log('getMonth', date.getMonth());
+
+
+
+        // ======================================================================
+
+        // const name = "Raouf";
+
+        // let car = {
+        //     name: "Toyota",
+        //     model: 2022,
+        //     price: "245k"
+        // }
 
         // JSON.stringify()
         // JSON is a builtin object of JS
-        let carString = JSON.stringify(car);
+        // let carString = JSON.stringify(car);
 
 
-        console.log(car);
-        console.log(carString);
-        console.log(typeof carString);
+        // console.log(car);
+        // console.log(carString);
+        // console.log(typeof carString);
 
 
-        localStorage.setItem('name', name)
+        // localStorage.setItem('name', name)
 
-        localStorage.setItem('car', car)
-        localStorage.setItem('carString', carString)
+        // localStorage.setItem('car', car)
+        // localStorage.setItem('carString', carString)     
 
 
+        // let objFromLS = localStorage.getItem('car')
+        // let carObj = localStorage.getItem('carString');
 
-        
-        
-        
-        
-        let objFromLS = localStorage.getItem('car')
-        let carObj = localStorage.getItem('carString');
-        
-        console.log(objFromLS);
-        console.log(carObj);
-        
+        // console.log(objFromLS);
+        // console.log(carObj);
+
         // JSON.parse()
-        let carObjObject = JSON.parse(carObj)
-        console.log(carObjObject);
+        // let carObjObject = JSON.parse(carObj)
+        // console.log(carObjObject);
 
 
         // document.querySelector('h3').innerHTML = objFromLS.name
-        document.querySelector('h3').innerHTML = carObjObject.name + ',' + carObjObject.model + ',' + carObjObject.price
+        // document.querySelector('h3').innerHTML = carObjObject.name + ',' + carObjObject.model + ',' + carObjObject.price
+
+
     </script>
 </body>
 
