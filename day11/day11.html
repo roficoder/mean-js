@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11</title>
+</head>
+
+<body>
+    <h1>Day - 11 JS</h1>
+    <h2>Local Storage</h2>
+
+    <h3></h3>
+
+    <script>
+        const name = "Raouf";
+
+        let car = {
+            name: "Toyota",
+            model: 2022,
+            price: "245k"
+        }
+
+        // JSON.stringify()
+        // JSON is a builtin object of JS
+        let carString = JSON.stringify(car);
+
+
+        console.log(car);
+        console.log(carString);
+        console.log(typeof carString);
+
+
+        localStorage.setItem('name', name)
+
+        localStorage.setItem('car', car)
+        localStorage.setItem('carString', carString)
+
+
+
+        
+        
+        
+        
+        let objFromLS = localStorage.getItem('car')
+        let carObj = localStorage.getItem('carString');
+        
+        console.log(objFromLS);
+        console.log(carObj);
+        
+        // JSON.parse()
+        let carObjObject = JSON.parse(carObj)
+        console.log(carObjObject);
+
+
+        // document.querySelector('h3').innerHTML = objFromLS.name
+        document.querySelector('h3').innerHTML = carObjObject.name + ',' + carObjObject.model + ',' + carObjObject.price
+    </script>
+</body>
+
+</html>
