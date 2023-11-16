@@ -1,0 +1,8 @@
+<div style="max-width: 800px; margin: 20px auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <h1 style="color: #333;">Quaid-e-Azam, Muhammad Ali Jinnah</h1>
+    <p style="color: #666; line-height: 1.6;">
+      Muhammad Ali Jinnah, also known as the "Father of the Nation" and "Quaid-e-Azam," was the founder of Pakistan.
+      Born on December 25, 1876, in Karachi, he played a pivotal role in the creation of an independent Muslim state.
+    </p>
+
+    </div>

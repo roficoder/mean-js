@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12 - JS</title>
+</head>
+
+<body>
+    <h1>Day 12 - JS</h1>
+
+    <h2>
+
+    </h2>
+
+
+
+    <button onclick="getQuaid()">Quaid Azam</button>
+    <button onclick="getIqbal()">Allama Iqbal</button>
+    <button onclick="getSyed()">Sir Syed</button>
+
+    <button onclick="getData('quaid')">Quaid Azam</button>
+    <button onclick="getData('iqbal')">Allama Iqbal</button>
+    <button onclick="getData('syed')">Sir Syed</button>
+
+
+    <p class="details"></p>
+
+
+    <script>
+
+
+        function getData(person) {
+            const xh = new XMLHttpRequest();
+
+            xh.onload = function () {
+                console.log(this.responseText);
+                document.querySelector('.details').innerHTML = this.responseText;
+            }
+
+            xh.open("GET", person + ".txt", false);
+            xh.send();
+        }
+
+        function getIqbal() {
+            const xh = new XMLHttpRequest();
+
+            xh.onload = function () {
+                console.log(this.responseText);
+                document.querySelector('.details').innerHTML = this.responseText;
+            }
+
+            xh.open("GET", "iqbal.txt", false);
+            xh.send();
+        }
+
+
+        function getSyed() {
+            const xh = new XMLHttpRequest();
+
+            xh.onload = function () {
+                console.log(this.responseText);
+            }
+
+            xh.open("GET", "syed.txt", false);
+            xh.send();
+        }
+
+        function getQuaid() {
+            const xh = new XMLHttpRequest();
+
+            xh.onload = function () {
+                console.log(this.responseText);
+            }
+
+            xh.open("GET", "quaid.txt", false);
+            xh.send();
+        }
+
+        function loadDoc() {
+            const xh = new XMLHttpRequest();
+
+            xh.onload = function () {
+                console.log(this.responseText);
+            }
+
+            // GET - to get data from server
+            // POST - to post or send data on server
+            // PUT - to edit data on server
+            // DELETE - to delete data on server
+            xh.open("GET", "data.txt", false);
+            xh.send();
+        }
+
+        // function loadDoc() {
+        //     const xhttp = new XMLHttpRequest();
+        //     xhttp.onload = function () {
+        //         setData(this.responseText)
+        //     }
+        //     xhttp.open("GET", "ajax_info.txt", false);
+        //     xhttp.send();
+        // }
+
+
+        function setData(data) {
+            document.getElementById("demo").innerHTML = data;
+        }
+    </script>
+</body>
+
+</html>
