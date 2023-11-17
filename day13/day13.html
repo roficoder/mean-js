@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Day 13 - JS</h1>
+
+    <h1>Promises</h1>
+
+
+    <p class="data"></p>
+
+    <script>
+
+
+        const prom = new Promise(function (resolve, reject) {
+
+            let checker = true;
+
+            setTimeout(() => {
+                // checker = false;
+
+                if (checker) {
+                    resolve("Testing Promise")
+                } else {
+                    reject("Rejected")
+                }
+            }, 10000);
+
+
+        })
+
+        const data = document.querySelector('.data')
+
+        prom.then(function (res) {
+            console.log(res);
+            data.innerHTML = res
+        }).catch(function (err) {
+            console.log(err);
+            data.innerHTML = err
+        })
+
+
+        function sum() {
+            console.log("Sum");
+        }
+
+        function product() {
+            console.log("Product");
+        }
+
+        function loop() {
+            for (let i = 0; i < 100; i++)
+                console.log(i);
+        }
+
+        // setTimeout(loop, 2000);
+        sum()
+        product()
+
+
+
+    </script>
+</body>
+
+</html>
