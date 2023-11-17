@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+    <style>
+        .cards{
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
 
+        .card{
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.345);
+            border-radius: 5px;
+            padding: 1em;
+            flex-grow: 1;
+            flex-basis: 200px;
+        }
+    </style>
 <body>
     <h1>Day 13 - JS</h1>
 
@@ -14,6 +28,8 @@
 
 
     <p class="data"></p>
+
+    <div class="cards"></div>
 
     <script>
 
@@ -30,30 +46,50 @@
 
         const prom = new Promise(function (resolve, reject) {
 
-            let checker = true;
-
-            setTimeout(() => {
-                // checker = false;
-
-                if (checker) {
-                    resolve("Testing Promise")
+            const xhttp = new XMLHttpRequest()
+            xhttp.onload = function () {
+                if (this.status == 200) {
+                    resolve(this.responseText)
                 } else {
-                    reject("Rejected")
+                    reject("Data not found")
                 }
-            }, 10000);
-
+            }
+            xhttp.open('GET', 'https://jsonplaceholder.typicode.com/users', true)
+            xhttp.send()
 
         })
 
         const data = document.querySelector('.data')
 
         prom.then(function (res) {
-            console.log(res);
-            data.innerHTML = res
+            // console.log(JSON.parse(res));
+            // data.innerHTML = res
+            cardMaker(JSON.parse(res))
         }).catch(function (err) {
             console.log(err);
             data.innerHTML = err
         })
+
+
+        function cardMaker(data) {
+            let str = ''
+            console.log(data);
+            data.forEach(function (item) {
+                console.log(item);
+                str += `
+                <div class="card">
+                    <h2>${item.name}</h2>
+                <p>${item.email}</p>
+                    </div>
+                `
+            })
+
+            document.querySelector('.cards').innerHTML = str
+
+            console.log(str);
+        }
+
+
 
 
         function sum() {
