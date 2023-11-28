@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Day 15 - JS</h1>
+
+    <button onclick="gettingData()">Get Users</button>
+
+    <br><br>
+
+    <input type="text" placeholder="Name" id="name">
+    <input type="number" placeholder="age" id="age">
+    <input type="text" id="idForUpdate" placeholder="Id for updating">
+    <br><br>
+    <button onclick="submitData()">Submit</button>
+    <button onclick="updateUser()">Update</button>
+
+    <br><br><br>
+
+    <input type="number" id="deleteId">
+    <button onclick="deleteUser()">Delete</button>
+
+    <br><br><br>
+
+
+    <a href="https://www.w3.org/Protocols/HTTP/HTRQ_Headers.html">Request fields for header</a>
+
+    <script>
+        const url = "http://localhost:3000/users"
+
+        function gettingData() {
+            fetch(url).then(data => {
+                return data.json()
+            }).then(users => {
+                console.log(users);
+            })
+        }
+
+        function submitData(){
+            const nameInput = document.getElementById('name')
+            const ageInput = document.getElementById('age')
+
+           
+
+            const userObj = {
+                name: nameInput.value,
+                age: ageInput.value
+            }
+
+            console.log(userObj);
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userObj)
+            })
+
+            gettingData()
+        }
+
+        function deleteUser(){
+            const deleteId = document.getElementById('deleteId').value
+            console.log(deleteId);
+            // url/id
+            const deleteUrl = `${url}/${deleteId}`
+            fetch(deleteUrl, {
+                method: 'DELETE'
+            })
+            // http://localhost:3000/users/1
+        }
+
+        function updateUser(){
+            const nameValue = document.getElementById('name').value
+            const ageValue = document.getElementById('age').value
+            const updateId = document.getElementById('idForUpdate').value
+
+            const updateObj = {
+                name: nameValue,
+                age: ageValue
+            }
+            const updateUrl = url + '/' + updateId
+            // http://localhost:3000/users/1
+            fetch(updateUrl, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updateObj)
+            })
+        }
+    </script>
+</body>
+
+</html>

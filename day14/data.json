@@ -1,37 +1,19 @@
 {
-    "project": {
-        "test": "Test api",
-        "age": 18,
-        "numbers": [1,2,3]
+  "users": [
+    {
+      "name": "Abdul Raouf",
+      "age": "21",
+      "id": 2
     },
-
-    "cars": [
-        {
-            "name": "Test Car",
-            "model": 2021,
-            "price": 210000
-        },
-        {
-            "name": "Test Car",
-            "model": 2021,
-            "price": 210000
-        },
-        {
-            "name": "Test Car",
-            "model": 2021,
-            "price": 210000
-        },
-        {
-            "name": "Test Car",
-            "model": 2021,
-            "price": 210000
-        }
-    ],
-
-    "user": {
-        "name": "Raouf",
-        "age": "21",
-        "class": "BSCS",
-        "siblings": 10
+    {
+      "name": "Abdul Raouf",
+      "age": "21",
+      "id": 3
+    },
+    {
+      "name": "classified_frontend",
+      "age": "345",
+      "id": 4
     }
+  ]
 }
