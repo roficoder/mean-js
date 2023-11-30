@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Form Details
+
+    
+
+    <br><br>
+    <input placeholder="Name" type="text" id="name">
+    <br><br>
+    <input placeholder="Age" type="text" id="age">
+
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const url = 'http://localhost:3000/users'
+        const userId = params.get('id')
+        const userName = params.get('name')
+
+        console.log('name', userName, 'id', userId);
+
+        fetch(url + '/' + userId).then(data =>{
+            return data.json()
+        }).then(res =>{
+            document.getElementById('name').value = res.name
+            document.getElementById('age').value = res.age
+            console.log(res);
+        })
+    </script>
+</body>
+</html>
